@@ -11,6 +11,7 @@ const TESTNET_SPOT: &str = "wss://stream-testnet.bybit.com/v5/public/spot";
 pub enum OrderbookDepth {
     Level1,
     Level50,
+    Level200,
 }
 
 impl From<OrderbookDepth> for u16 {
@@ -19,6 +20,7 @@ impl From<OrderbookDepth> for u16 {
         match value {
             Level1 => 1,
             Level50 => 50,
+            Level200 => 200,
         }
     }
 }
